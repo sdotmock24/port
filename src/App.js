@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import './App.css';
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import { Navbar } from './components/Navbar';
 function App() {
   return (
-    <h2>Portfolio Project 2</h2>
+    <Navbar/>
   );
 }
 
