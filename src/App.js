@@ -1,38 +1,35 @@
 import React, { useState } from 'react';
-import './App.css';
-import "bootstrap/dist/css/bootstrap.min.css";
-import Particles from 'react-particles-js';
-import { Navbar } from './components/Navbar';
-import Header from './components/Header';
+import { Navbar, Footer } from './components';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Home from './pages/HomePage/Home';
+import AboutMe from './pages/HomePage/AboutMe/AboutMe';
+import Skills from './pages/Skills/Skills';
+import ContactMe from './pages/ContactMe/ContactMe';
+import ScrollToTop from './components/ScrollTopTop';
+import Globalstyle from './globalStyles';
+
 
 function App() {
   return (
-    <>
-      <Particles 
-        className="particles-canvas"
-        params={{
-          particles: {
-            number: {
-              value: 30,
-              density: {
-                enable: true,
-                value_area: 900
-              }
-            },
-            shape: {
-              type: "circle",
-              stroke: {
-                width: 6,
-                color: "#f9ab00"
-              }
-            }
-          }
-        }}
-      />
+    <Router>
+      <Globalstyle />
+      <ScrollToTop />
       <Navbar />
-      <Header />
-    </>
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/aboutme" exact component={AboutMe} />
+        <Route path="/skills" exact component={Skills} />
+        <Route path="/contactme" exact component={ContactMe} />
+      </Switch>
+      <Footer />
+    </Router>
   );
 }
+
+const Homme = () => (
+  <>
+    
+  </>
+);
 
 export default App;

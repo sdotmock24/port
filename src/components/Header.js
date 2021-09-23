@@ -5,10 +5,10 @@ const Header = () => {
     return (
         <div className="header-wraper">
             <div className="main-info">
-                <hi>Web Development</hi>
+                <hi class="fs-1 fw-bold">Web Development</hi>
                 <Typed
                     className="typed-text"
-                    strings={[ "Web Design", "Web Development", "Facebook Ads SMM", "Google Ads" ]}
+                    strings={[ "React", "Web Development", "Facebook Ads SMM", "Google Ads" ]}
                     typeSpeed={40}
                     backSpeed={60}
                     loop
@@ -19,4 +19,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;
