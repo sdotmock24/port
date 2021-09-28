@@ -17,19 +17,14 @@ function App() {
       <Navbar />
       <Switch>
         <Route path="/" exact component={Home} />
-        <Route path="/aboutme" exact component={AboutMe} />
-        <Route path="/skills" exact component={Skills} />
-        <Route path="/contactme" exact component={ContactMe} />
+        <Route path="/aboutme" component={AboutMe} />
+        <Route path="/skills" component={Skills} />
+        <Route path="/contactme" component={ContactMe} />
       </Switch>
       <Footer />
     </Router>
   );
 }
 
-const Homme = () => (
-  <>
-    
-  </>
-);
 
 export default App;
